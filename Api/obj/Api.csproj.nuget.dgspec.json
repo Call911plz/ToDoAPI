@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/NightShade/Documents/VSCodeProjects/ToDoAPI/Api/Api.csproj": {}
+    "/Users/call911pls/Downloads/ToDoAPI/Api/Api.csproj": {}
   },
   "projects": {
-    "/home/NightShade/Documents/VSCodeProjects/ToDoAPI/Api/Api.csproj": {
+    "/Users/call911pls/Downloads/ToDoAPI/Api/Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/NightShade/Documents/VSCodeProjects/ToDoAPI/Api/Api.csproj",
+        "projectUniqueName": "/Users/call911pls/Downloads/ToDoAPI/Api/Api.csproj",
         "projectName": "Api",
-        "projectPath": "/home/NightShade/Documents/VSCodeProjects/ToDoAPI/Api/Api.csproj",
-        "packagesPath": "/home/NightShade/.nuget/packages/",
-        "outputPath": "/home/NightShade/Documents/VSCodeProjects/ToDoAPI/Api/obj/",
+        "projectPath": "/Users/call911pls/Downloads/ToDoAPI/Api/Api.csproj",
+        "packagesPath": "/Users/call911pls/.nuget/packages/",
+        "outputPath": "/Users/call911pls/Downloads/ToDoAPI/Api/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/NightShade/.nuget/NuGet/NuGet.Config"
+          "/Users/call911pls/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -38,7 +38,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net9.0": {
@@ -84,12 +84,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[9.0.4, 9.0.4]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -98,7 +92,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/9.0.105/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
