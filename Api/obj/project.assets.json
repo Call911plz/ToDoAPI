@@ -5115,11 +5115,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/call911pls/Downloads/ToDoAPI/Api/Api.csproj",
+      "projectUniqueName": "/Users/call911pls/Documents/CodeProjects/ToDoAPI/Api/Api.csproj",
       "projectName": "Api",
-      "projectPath": "/Users/call911pls/Downloads/ToDoAPI/Api/Api.csproj",
+      "projectPath": "/Users/call911pls/Documents/CodeProjects/ToDoAPI/Api/Api.csproj",
       "packagesPath": "/Users/call911pls/.nuget/packages/",
-      "outputPath": "/Users/call911pls/Downloads/ToDoAPI/Api/obj/",
+      "outputPath": "/Users/call911pls/Documents/CodeProjects/ToDoAPI/Api/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/call911pls/.nuget/NuGet/NuGet.Config"

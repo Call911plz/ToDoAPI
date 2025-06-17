@@ -6,7 +6,7 @@ public interface IUserService
     public Task<bool> DeleteUserAsync(User userToDelete);
 }
 
-public class UserService : IUserRepository
+public class UserService : IUserService
 {
     IUserRepository _repo;
     public UserService(IUserRepository userRepository)
