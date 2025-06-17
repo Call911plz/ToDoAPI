@@ -13,8 +13,9 @@ builder.Services.AddDbContext<ToDoDbContext>(
     ")
 );
 builder.Services.AddOpenApi();
-builder.Services.AddControllers();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddControllers();
 
 var app = builder.Build();
 
@@ -25,7 +26,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.MapControllers();
-app.UseHttpsRedirection(); // Might cause a conflict. Dunno enough about it so will leave in
 
 app.Run();
 
