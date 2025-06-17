@@ -4,6 +4,7 @@ public interface IUserService
     public List<User> GetUsers();
     public Task<User> UpdateUserAsync(User userToUpdate);
     public Task<bool> DeleteUserAsync(User userToDelete);
+    public Task<string> LoginUserAsync(User userDetail);
 }
 
 public class UserService : IUserService
@@ -32,5 +33,16 @@ public class UserService : IUserService
     public async Task<bool> DeleteUserAsync(User userToDelete)
     {
         return await _repo.DeleteUserAsync(userToDelete);
+    }
+
+    public async Task<string> LoginUserAsync(User userDetail)
+    {
+        List<User> existingUsers = _repo.GetUsers();
+        if (existingUsers.Contains(userDetail))
+        {
+            // Generate and return token
+            return "done";
+        }
+        return string.Empty;
     }
 }
