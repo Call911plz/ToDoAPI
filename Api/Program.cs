@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddDbContext<ToDoDbContext>(
     opt => opt.UseSqlServer(@"
         Server=localhost;
@@ -11,9 +12,9 @@ builder.Services.AddDbContext<ToDoDbContext>(
         TrustServerCertificate=True;
     ")
 );
-
 builder.Services.AddOpenApi();
 builder.Services.AddControllers();
+builder.Services.AddScoped<IUserService, UserService>();
 
 var app = builder.Build();
 
