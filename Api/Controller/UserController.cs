@@ -16,6 +16,13 @@ public class UserController : ControllerBase
         return Ok(await _service.CreateUserAsync(newUser));
     }
 
+    [HttpPost("login")]
+    public ActionResult LoginUser(User userDetail)
+    {
+        string token = _service.LoginUser(userDetail);
+        return Ok();
+    }
+
     [HttpDelete]
     public async Task<ActionResult<bool>> DeleteUserAsync(User userToDelete)
     {
