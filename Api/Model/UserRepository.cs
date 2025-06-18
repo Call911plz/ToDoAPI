@@ -6,7 +6,7 @@ public interface IUserRepository
     public List<User> GetUsers();
     public Task<User> UpdateUserAsync(User userToUpdate);
     public Task<bool> DeleteUserAsync(User userToDelete);
-    public string GenerateToken(int tokenLength);
+    public LoginAuthToken GenerateToken(int tokenLength);
 }
 
 public class UserRepository(ToDoDbContext context) : IUserRepository
@@ -47,7 +47,7 @@ public class UserRepository(ToDoDbContext context) : IUserRepository
             .ExecuteDeleteAsync() > 0;
     }
 
-    public string GenerateToken(int tokenLength)
+    public LoginAuthToken GenerateToken(int tokenLength)
     {
         string token = "";
         Random rnd = new();
@@ -76,6 +76,6 @@ public class UserRepository(ToDoDbContext context) : IUserRepository
         if (token.All(char.IsLetterOrDigit) == false)
             throw new Exception("Token generated non-alphanumeric letter");
 
-        return token;
+        return new LoginAuthToken(token);
     }
 }

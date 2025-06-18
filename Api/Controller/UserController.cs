@@ -19,8 +19,10 @@ public class UserController : ControllerBase
     [HttpPost("login")]
     public ActionResult LoginUser(User userDetail)
     {
-        string token = _service.LoginUser(userDetail);
-        return Ok();
+        LoginAuthToken? token = _service.LoginUser(userDetail);
+        if (token == null)
+            return BadRequest(); // Temp return value until I figure out the right one to send
+        return Ok(token);
     }
 
     [HttpDelete]
