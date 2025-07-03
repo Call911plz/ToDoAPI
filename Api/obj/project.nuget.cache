@@ -1,12 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "3unk4htrDpw=",
+  "dgSpecHash": "8lW42OLvu2M=",
   "success": true,
   "projectFilePath": "/Users/call911pls/Documents/CodeProjects/ToDoAPI/Api/Api.csproj",
   "expectedPackageFiles": [
     "/Users/call911pls/.nuget/packages/azure.core/1.38.0/azure.core.1.38.0.nupkg.sha512",
     "/Users/call911pls/.nuget/packages/azure.identity/1.11.4/azure.identity.1.11.4.nupkg.sha512",
     "/Users/call911pls/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
+    "/Users/call911pls/.nuget/packages/isopoh.cryptography.argon2/2.0.0/isopoh.cryptography.argon2.2.0.0.nupkg.sha512",
+    "/Users/call911pls/.nuget/packages/isopoh.cryptography.blake2b/2.0.0/isopoh.cryptography.blake2b.2.0.0.nupkg.sha512",
+    "/Users/call911pls/.nuget/packages/isopoh.cryptography.securearray/2.0.0/isopoh.cryptography.securearray.2.0.0.nupkg.sha512",
     "/Users/call911pls/.nuget/packages/microsoft.aspnetcore.openapi/9.0.4/microsoft.aspnetcore.openapi.9.0.4.nupkg.sha512",
     "/Users/call911pls/.nuget/packages/microsoft.bcl.asyncinterfaces/7.0.0/microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",
     "/Users/call911pls/.nuget/packages/microsoft.build.framework/17.8.3/microsoft.build.framework.17.8.3.nupkg.sha512",

@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Isopoh.Cryptography.Argon2;
 
 public interface IUserRepository
 {
@@ -6,7 +7,7 @@ public interface IUserRepository
     public List<User> GetUsers();
     public Task<User> UpdateUserAsync(User userToUpdate);
     public Task<bool> DeleteUserAsync(User userToDelete);
-    public LoginAuthToken GenerateToken(int tokenLength);
+    public LoginAuthToken GenerateToken(string password);
 }
 
 public class UserRepository(ToDoDbContext context) : IUserRepository
@@ -47,34 +48,9 @@ public class UserRepository(ToDoDbContext context) : IUserRepository
             .ExecuteDeleteAsync() > 0;
     }
 
-    public LoginAuthToken GenerateToken(int tokenLength)
+    public LoginAuthToken GenerateToken(string password)
     {
-        string token = "";
-        Random rnd = new();
-
-        for (int i = 0; i < tokenLength; i++)
-        {
-            int character = rnd.Next(0, 62);
-            int startPos = 0;
-            switch (character)
-            {
-                case > 35:
-                    character -= 35;
-                    startPos = 97;
-                    break;
-                case > 9:
-                    character -= 9;
-                    startPos = 65;
-                    break;
-                default:
-                    startPos = 48;
-                    break;
-            }
-            token += Convert.ToChar(startPos + character);
-        }
-
-        if (token.All(char.IsLetterOrDigit) == false)
-            throw new Exception("Token generated non-alphanumeric letter");
+        string token = Argon2.Hash(password);        
 
         return new LoginAuthToken(token);
     }

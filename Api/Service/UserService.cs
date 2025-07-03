@@ -39,7 +39,7 @@ public class UserService : IUserService
     {
         List<User> existingUsers = _repo.GetUsers();
         if (existingUsers.Contains(userDetail))
-            return _repo.GenerateToken(Const.TOKEN_LENGTH);
+            return _repo.GenerateToken(userDetail.Password);
         return null;
     }
 }
