@@ -11,9 +11,10 @@ public class UserController : ControllerBase
     }
 
     [HttpPost("register")]
-    public async Task<ActionResult<User>> CreateUserAsync(User newUser)
+    public async Task<ActionResult<LoginAuthToken>> CreateUserAsync(User newUser)
     {
-        return Ok(await _service.CreateUserAsync(newUser));
+        LoginAuthToken token = await _service.CreateUserAsync(newUser);
+        return Ok(token);
     }
 
     [HttpPost("login")]

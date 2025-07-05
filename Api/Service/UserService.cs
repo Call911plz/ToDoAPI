@@ -1,6 +1,6 @@
 public interface IUserService
 {
-    public Task<User> CreateUserAsync(User newUser);
+    public Task<LoginAuthToken> CreateUserAsync(User newUser);
     public List<User> GetUsers();
     public Task<User> UpdateUserAsync(User userToUpdate);
     public Task<bool> DeleteUserAsync(User userToDelete);
@@ -15,9 +15,10 @@ public class UserService : IUserService
         _repo = userRepository;
     }
 
-    public async Task<User> CreateUserAsync(User newUser)
+    public async Task<LoginAuthToken> CreateUserAsync(User newUser)
     {
-        return await _repo.CreateUserAsync(newUser);
+        await _repo.CreateUserAsync(newUser);
+        return _repo.GenerateToken(newUser.Password);
     }
 
     public List<User> GetUsers()
