@@ -50,8 +50,11 @@ public class UserRepository(ToDoDbContext context) : IUserRepository
 
     public LoginAuthToken GenerateToken(string password)
     {
-        string token = Argon2.Hash(password);        
+        LoginAuthToken token = new LoginAuthToken()
+        {
+            Token = Argon2.Hash(password)
+        };
 
-        return new LoginAuthToken(token);
+        return token;
     }
 }

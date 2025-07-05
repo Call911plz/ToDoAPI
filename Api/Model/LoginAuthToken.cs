@@ -1,8 +1,4 @@
 public class LoginAuthToken
 {
-    public string Token;
-    public LoginAuthToken(string token)
-    {
-        Token = token;
-    }
+    public string Token { get; set; } = string.Empty;
 }
